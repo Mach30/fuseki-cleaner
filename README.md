@@ -26,8 +26,24 @@ The expected syntax is a series of RDF triples ending with a `.`. Therefore, the
 <http://opencaesar.io/tutorial/vocabulary/mission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 ```
 
-Run the following python script to fix the aforementioned ttl syntax error:
+## Usage
 
 ```
-fuseki_cleaner.py
+$ ./fuseki_cleaner.py
+usage: fuseki_cleaner.py [-h] [-i INPUT] [-o [OUTPUT]]
+
+Convert quadruples to triples.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Filename of TTL to be cleaned
+  -o [OUTPUT], --output [OUTPUT]
+                        Filename of output TTL
+```
+
+For example,
+
+```bash
+$ ./fuseki_cleaner.py -i data.ttl -o new_data.ttl
 ```
